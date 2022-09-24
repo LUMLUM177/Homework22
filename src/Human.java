@@ -1,9 +1,9 @@
 public class Human {
 
-    int yearOfBirth;
-    String name;
-    String town;
-    String job;
+    private final int yearOfBirth;
+    private final String name;
+    private final String town;
+    private final String job;
 
     public Human(String name, String town, int year, String job) {
         if (year < 0) {
@@ -11,17 +11,17 @@ public class Human {
         } else {
             this.yearOfBirth = year;
         }
-        if (name.isEmpty()) {
+        if (name != null && name.isEmpty()) {
             this.name = "Информация не указана";
         } else {
             this.name = name;
         }
-        if (town.isEmpty()) {
+        if (town != null && town.isEmpty()) {
             this.town = "Информация не указана";
         } else {
             this.town = town;
         }
-        if (job.isEmpty()) {
+        if (job != null && job.isEmpty()) {
             this.job = "Информация не указана";
         } else {
             this.job = job;
